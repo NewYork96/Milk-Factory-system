@@ -102,7 +102,7 @@ class ProductsController extends Controller
         $this -> authorize('update', Product::class);
         $additives = Additive::all();
 
-        return view('products/editproduct', [
+        return view('products/editProduct', [
             'product' => $product,
             'additives' => $additives,
         ]);
@@ -133,6 +133,8 @@ class ProductsController extends Controller
                 $product -> price = $request -> price;
 
                 $product -> milkfat = $request -> milkfat;
+
+                $product -> save();
 
                 foreach ($product -> additive as $additive) 
                 {

@@ -1,7 +1,6 @@
 @extends('nav')
 
 @section('content')
-    {{$product -> additive_id1}}
     <form action="{{route('products.update', $product)}}" method="post">
         @csrf
         @method('PUT')

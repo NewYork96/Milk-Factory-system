@@ -1,7 +1,7 @@
 @extends('nav')
 
 @section('content')
-    <form action="/tejuzem/productionOrders/calculate" method="get">
+    <form action="/productionOrders/calculate" method="get">
         @csrf
         @method('GET')
         <div class="mb-3  mx-auto col-6">
