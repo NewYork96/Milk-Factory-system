@@ -8,7 +8,7 @@
 
         @csrf
         <div class="mb-3  mx-auto col-6">
-            <label for="product" class="form-label">Beszállító</label>
+            <label for="product" class="form-label">Termék neve</label>
             <select id="product" class="form-select" name="product" @foreach ($products as $product)>
                 <option value="{{$product -> id}}">
                   {{$product -> product}}
